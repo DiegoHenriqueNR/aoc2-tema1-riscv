@@ -19,4 +19,5 @@ ali2:
 mulh s5, s1, s2        # s5 = 32 bits altos de s1 x s2 = 0   (extensao M)
 mul  s6, s1, s2        # s6 = 32 bits baixos de s1 x s2 = 50 (extensao M)
 # {s5, s6} = s1 x s2 (resultado de 64 bits)
-
+addi a0, zero, 10      # codigo 10 = encerrar o programa
+ecall                  # chamada de sistema: termina sem erro
