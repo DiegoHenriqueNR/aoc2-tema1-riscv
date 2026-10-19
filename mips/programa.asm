@@ -18,4 +18,6 @@ ali2:
         mult $s1, $s2          # HI:LO = s1 x s2
         mfhi $s5               # s5 = parte alta = 0
         mflo $s6               # s6 = parte baixa = 50
+           addi $v0, $zero, 10    # codigo 10 = encerrar
+           syscall
 
