@@ -3,13 +3,7 @@
 Faculdade Cotemig · Arquitetura e Organização de Computadores II · Prof. Luiz Mesquita
 
 ## Integrantes
-| Nome | Papel |
-|---|---|
-| Nome 1 | Pesquisador(a) |
-| Nome 2 | Experimentador(a) |
-| Nome 3 | Designer |
-| Nome 4 | Apresentador(a) |
-| Diego Henrique Rocha | Organizador(a) |
+Diego Rocha - Pedro Diniz - Gabriel - Arthur
 
 ## Pergunta
 Por que empresas do mundo todo estão trocando processadores pagos por um "processador open source"?
