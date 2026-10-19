@@ -3,7 +3,10 @@
 Faculdade Cotemig · Arquitetura e Organização de Computadores II · Prof. Luiz Mesquita
 
 ## Integrantes
-Diego Rocha - Pedro Diniz - Gabriel - Arthur
+- Diego Rocha
+- Pedro Diniz
+- Gabriel
+- Arthur
 
 ## Pergunta
 Por que empresas do mundo todo estão trocando processadores pagos por um "processador open source"?
@@ -31,40 +34,11 @@ de 64 bits, em RISC-V e em MIPS, e comparamos as duas versões.
 ### Como executar (RISC-V)
 1. Acesse https://venus.cs61c.org/
 2. Cole o conteúdo de `riscv/programa.s` na aba **Editor**
-3. Vá em **Simulator** → **Run** e confira os registradores
+3. Vá em **Simulator** → **Run** e confira os registradores (Display Settings → Decimal)
 
 **Resultado esperado:** `s0 = 15`, `s1 = 10`, `s2 = 5`, `t0 = 12`, `s3 = 2`, `s4 = 2`, `s5 = 0`, `s6 = 50`
 
 ## Comparação MIPS × RISC-V
 | Operação | MIPS | RISC-V |
 |---|---|---|
-| Carregar valor | `addi $s1, $zero, 10` | `addi s1, zero, 10` |
-| Soma | `add $s0, $s1, $s2` | `add s0, s1, s2` |
-| Divisão | `div $t0, $s2` + `mflo $s3` | `div s3, t0, s2` |
-| Resto | `mfhi $s4` | `rem s4, t0, s2` |
-| Desvio | `beq $s4, $s3, ali` | `beq s4, s3, ali` |
-| Multiplicação 64 bits | `mult $s1, $s2` + `mfhi $s5` + `mflo $s6` | `mulh s5, s1, s2` + `mul s6, s1, s2` |
-
-**O que mudou:** os registradores perdem o `$`, e o RISC-V não usa os registradores especiais **HI/LO**:
-divisão, resto e multiplicação escrevem direto no registrador de destino.
-
-### Instruções executadas
-| Versão | Instruções executadas |
-|---|---|
-| MIPS | 12 |
-| RISC-V | 10 |
-
-### Base ou extensão?
-| Grupo | Instruções usadas |
-|---|---|
-| Base **RV32I** | `addi`, `add`, `sub`, `beq`, `j` (pseudo-instrução de `jal`) |
-| Extensão **M** | `div`, `rem`, `mulh`, `mul` |
-
-## Conclusão
-O resultado confirma a teoria porque as operações simples (soma, subtração, desvio) foram resolvidas
-apenas com a base **RV32I**, e só as operações de multiplicação e divisão precisaram da **extensão M**,
-exatamente como o artigo descreve: uma base mínima + extensões adicionadas conforme a necessidade.
-
-## Uso de IA
-Usamos IA para revisar o código, montar a versão MIPS equivalente e organizar este README.
-Todo o conteúdo foi conferido pelo grupo nos simuladores.
+| Carregar valor | `addi $s1, $zero, 10` | `addi
